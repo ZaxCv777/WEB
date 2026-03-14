@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    
+    <!-- Panggil file CSS yang sama -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">MyApp</div>
+        <div class="nav-menu">
+            <span class="user-greeting" id="displayName"></span>
+            <button id="btnLogout" class="btn-logout">Logout</button>
+        </div>
+    </nav>
+    
+    <!-- Konten Dashboard -->
+    <div class="dashboard-container">
+        <div class="welcome-card">
+            <h1 id="welcomeMessage">Selamat datang!</h1>
+            <p>Ini adalah halaman dashboard Anda. Anda berhasil login ke dalam sistem.</p>
+        </div>
+        
+        <div class="cards">
+            <div class="card">
+                <h3>👤 Informasi Akun</h3>
+                <div class="card-content">
+                    <p><strong>Username:</strong> <span id="userUsername"></span></p>
+                    <p><strong>Nama:</strong> <span id="userNama"></span></p>
+                    <p><strong>Status:</strong> <span class="badge success">Aktif</span></p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>📊 Statistik</h3>
+                <div class="card-content">
+                    <div class="stat-number">42</div>
+                    <p>Total kunjungan</p>
+                    <button class="btn-small" onclick="alert('Fitur dalam pengembangan!')">Lihat Detail</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>🕒 Aktivitas Terakhir</h3>
+                <div class="card-content">
+                    <p>📅 Login: <span id="lastLogin"></span></p>
+                    <p>📍 IP: 192.168.1.1</p>
+                    <p>🖥️ Perangkat: Browser Desktop</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">MyProfile</a>
+            </div>
+            
+            <!-- Hamburger menu untuk mobile -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Navigasi menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#layanan">Layanan</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+            
+            <!-- Tombol login/register -->
+            <div class="nav-button">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="daftar.html" class="btn-register">Daftar</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Selamat Datang di Website Saya</h1>
+                <p>Halo! Saya seorang web developer pemula yang sedang belajar HTML, CSS, dan JavaScript. Website ini adalah hasil belajar saya.</p>
+                <div class="hero-buttons">
+                    <a href="profil.html" class="btn-primary">Lihat Profil</a>
+                    <a href="kontak.html" class="btn-secondary">Hubungi Saya</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero.svg" alt="Hero Image" onerror="this.src='https://via.placeholder.com/400x300'">
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== FITUR SECTION ===== -->
+    <section class="features">
+        <h2 class="section-title">Apa yang Saya Tawarkan</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <i class="fas fa-code feature-icon"></i>
+                <h3>Web Development</h3>
+                <p>Membuat website modern dan responsif dengan HTML, CSS, dan JavaScript.</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-mobile-alt feature-icon"></i>
+                <h3>Responsive Design</h3>
+                <p>Website yang tampil sempurna di semua perangkat, dari desktop hingga mobile.</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-rocket feature-icon"></i>
+                <h3>Performance</h3>
+                <p>Website cepat dan optimal untuk pengalaman pengguna yang terbaik.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== TENTANG SECTION ===== -->
+    <section id="tentang" class="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/about.jpg" alt="About Me" onerror="this.src='https://via.placeholder.com/400x400'">
+            </div>
+            <div class="about-content">
+                <h2>Tentang Saya</h2>
+                <p>Saya adalah seorang pemula yang sedang belajar web development. Saya sangat tertarik dengan dunia programming dan ingin terus belajar hal-hal baru.</p>
+                <p>Saat ini saya sedang mempelajari:</p>
+                <ul class="skill-list">
+                    <li><i class="fab fa-html5"></i> HTML5</li>
+                    <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                    <li><i class="fab fa-js"></i> JavaScript</li>
+                </ul>
+                <a href="profil.html" class="btn-primary">Selengkapnya</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>MyProfile</h3>
+                <p>Website profil pribadi untuk belajar web development.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#layanan">Layanan</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Bantuan</h4>
+                <ul>
+                    <li><a href="kontak.html">Kontak</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privasi</a></li>
+                    <li><a href="#">Syarat</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Kontak</h4>
+                <p><i class="fas fa-envelope"></i> email@example.com</p>
+                <p><i class="fas fa-phone"></i> +62 812 3456 7890</p>
+                <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 MyProfile. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Panggil file JavaScript dashboard -->
+    <script src="script"></script>
+</body>
+</html>
