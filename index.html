@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>WEB PERTAMA KU</title>
+    <link rel="stylesheet" href="style.css"
+    
+    </head>
+    <body> 
+    
+    <div class="container">
+        <div class="login-box">
+            <h2>🔐 Login</h2>
+            <p class="subtitle">Silakan login untuk melanjutkan</p>
+            
+            <!-- Alert untuk notifikasi -->
+            <div id="alert" class="alert"></div>
+            
+            <!-- Form Login -->
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username / Email</label>
+                    <input type="text" id="username" placeholder="Masukkan username atau email">
+                    <small class="error-message" id="usernameError"></small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Masukkan password">
+                    <small class="error-message" id="passwordError"></small>
+                </div>
+                
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember"> Ingat saya
+                    </label>
+                    <a href="#" class="forgot-link">Lupa password?</a>
+                </div>
+                
+                <button type="button" id="btnLogin" class="btn-login">
+                    <span class="loading" id="loading"></span>
+                    <span id="btnText">Login</span>
+                </button>
+            </form>
+            
+            <p class="register-link">
+                Belum punya akun? <a href="#">Daftar sekarang</a>
+            </p>
+            
+            <div class="demo-info">
+                <p>🔑 Demo: <strong>admin</strong> / <strong>admin123</strong></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
